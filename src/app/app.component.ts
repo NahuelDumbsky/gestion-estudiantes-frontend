@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { ListaEstudiantesComponent } from "./lista-estudiantes/lista-estudiantes.component";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, ListaEstudiantesComponent, HttpClientModule, RouterLinkActive, RouterLink, FormsModule]
 })
 export class AppComponent {
-  title = 'gestion-estudiantes-frontend';
+  title = 'Sistema de gestion de estudiantes';
 }
