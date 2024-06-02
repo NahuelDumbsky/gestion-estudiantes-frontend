@@ -16,8 +16,12 @@
       <td>{{estudiante.nombre}}</td>
       <td>{{estudiante.apellido}}</td>
       <td>{{estudiante.email}}</td>
-      <!--<button (click)="actualizarEstudiante(estudiante.id)" class="btn btn-info">Editar</button>-->
-      <!--<button (click)="eliminarEstudiante(estudiante.id)" class="btn btn-info" style="margin-left: 10px;">Editar</button>-->
+      <td>
+        <button (click)="actualizarEstudiante(estudiante.id)" class="btn btn-primary">Editar</button>
+      <button (click)="eliminarEstudiante(estudiante.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+      <button (click)="verDetallesDelEstudiante(estudiante.id)" class="btn btn-info" style="margin-left: 10px;">Detalles</button>
+      </td>
+
     </tr>
   </tbody>
 </table>

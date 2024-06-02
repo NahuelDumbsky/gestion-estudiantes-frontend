@@ -28,4 +28,14 @@ export class EstudianteService {
     return this.httpClient.put(`${this.baseUrl}/${id}`, estudiante);
   }
 
+  //este metodo sirve para obtener los estudiantes por Id
+  obtenerEstudiantePorId(id:number):Observable<Estudiante>{
+    return this.httpClient.get<Estudiante>(`${this.baseUrl}/${id}`);
+  }
+
+  //este metodo sirve para eliminar a el estudiante que se desee
+  eliminarEstudiante(id:number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl}/${id}`);
+  }
+
 }

@@ -3,16 +3,16 @@ import { Estudiante } from '../estudiante';
 import { FormsModule } from '@angular/forms';
 import { EstudianteService } from '../estudiante.service';
 import { Router } from '@angular/router';
-import { error } from 'console';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-registrar-estudiante',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './registrar-estudiante.component.html',
   styleUrl: './registrar-estudiante.component.css'
 })
-export class RegistrarEstudianteComponent {
+export class RegistrarEstudianteComponent implements OnInit {
 
   estudiante : Estudiante = new Estudiante();
   constructor(private estudianteServicio:EstudianteService, private router:Router){
